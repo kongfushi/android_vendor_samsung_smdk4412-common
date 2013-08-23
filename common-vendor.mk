@@ -16,3 +16,4 @@
 DEVICE_PACKAGE_OVERLAYS += vendor/samsung/smdk4412-common/overlay
 
 $(call inherit-product, vendor/samsung/smdk4412-common/common-vendor-blobs.mk)
+
