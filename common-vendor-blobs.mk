@@ -15,45 +15,37 @@
 LOCAL_PATH := vendor/samsung/smdk4412-common
 
 PRODUCT_PACKAGES += \
-	libUMP \
-	libfimc
+    libTVOut \
+    libUMP \
+    libfimc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/sbin/cbd:root/sbin/cbd
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/sbin/cbd:sbin/cbd \
     $(LOCAL_PATH)/proprietary/system/bin/bcm4334.hcd:system/bin/bcm4334.hcd \
     $(LOCAL_PATH)/proprietary/system/bin/bcm4334_murata.hcd:system/bin/bcm4334_murata.hcd \
     $(LOCAL_PATH)/proprietary/system/bin/bcm4334_semco.hcd:system/bin/bcm4334_semco.hcd \
     $(LOCAL_PATH)/proprietary/system/bin/bcm4334_semcosh.hcd:system/bin/bcm4334_semcosh.hcd \
     $(LOCAL_PATH)/proprietary/system/bin/gps.cer:system/bin/gps.cer \
-    $(LOCAL_PATH)/proprietary/system/bin/lpm:system/bin/lpm
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/system/bin/lpm:system/bin/lpm \
     $(LOCAL_PATH)/proprietary/system/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \
-    $(LOCAL_PATH)/proprietary/system/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/system/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv \
+    $(LOCAL_PATH)/proprietary/system/etc/srm.bin:system/etc/srm.bin \
     $(LOCAL_PATH)/proprietary/system/etc/wifi/bcmdhd_apsta.bin_b2:system/etc/wifi/bcmdhd_apsta.bin_b2 \
     $(LOCAL_PATH)/proprietary/system/etc/wifi/bcmdhd_mfg.bin_b2:system/etc/wifi/bcmdhd_mfg.bin_b2 \
     $(LOCAL_PATH)/proprietary/system/etc/wifi/bcmdhd_p2p.bin_b2:system/etc/wifi/bcmdhd_p2p.bin_b2 \
     $(LOCAL_PATH)/proprietary/system/etc/wifi/bcmdhd_sta.bin_b2:system/etc/wifi/bcmdhd_sta.bin_b2 \
+    $(LOCAL_PATH)/proprietary/system/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
     $(LOCAL_PATH)/proprietary/system/etc/wifi/nvram_mfg.txt_murata:system/etc/wifi/nvram_mfg.txt_murata \
     $(LOCAL_PATH)/proprietary/system/etc/wifi/nvram_mfg.txt_semcosh:system/etc/wifi/nvram_mfg.txt_semcosh \
-    $(LOCAL_PATH)/proprietary/system/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
+    $(LOCAL_PATH)/proprietary/system/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
     $(LOCAL_PATH)/proprietary/system/etc/wifi/nvram_net.txt_murata:system/etc/wifi/nvram_net.txt_murata \
     $(LOCAL_PATH)/proprietary/system/etc/wifi/nvram_net.txt_semcosh:system/etc/wifi/nvram_net.txt_semcosh \
-    $(LOCAL_PATH)/proprietary/system/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/proprietary/system/etc/srm.bin:system/etc/srm.bin
-
-PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/system/lib/egl/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
     $(LOCAL_PATH)/proprietary/system/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
-    $(LOCAL_PATH)/proprietary/system/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/system/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
     $(LOCAL_PATH)/proprietary/system/lib/libcec.so:system/lib/libcec.so \
     $(LOCAL_PATH)/proprietary/system/lib/libddc.so:system/lib/libddc.so \
     $(LOCAL_PATH)/proprietary/system/lib/libedid.so:system/lib/libedid.so \
@@ -69,9 +61,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/system/lib/libquramimagecodec.so:system/lib/libquramimagecodec.so \
     $(LOCAL_PATH)/proprietary/system/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
     $(LOCAL_PATH)/proprietary/system/lib/libUMP.so:system/lib/libUMP.so \
-    $(LOCAL_PATH)/proprietary/system/lib/libvdis.so:system/lib/libvdis.so
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/system/lib/libvdis.so:system/lib/libvdis.so \
     $(LOCAL_PATH)/proprietary/system/media/battery_batteryerror.qmg:system/media/battery_batteryerror.qmg \
     $(LOCAL_PATH)/proprietary/system/media/battery_charging_100.qmg:system/media/battery_charging_100.qmg \
     $(LOCAL_PATH)/proprietary/system/media/battery_charging_10.qmg:system/media/battery_charging_10.qmg \
@@ -95,17 +85,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/system/media/battery_charging_95.qmg:system/media/battery_charging_95.qmg \
     $(LOCAL_PATH)/proprietary/system/media/battery_error.qmg:system/media/battery_error.qmg \
     $(LOCAL_PATH)/proprietary/system/media/chargingwarning.qmg:system/media/chargingwarning.qmg \
-    $(LOCAL_PATH)/proprietary/system/media/Disconnected.qmg:system/media/Disconnected.qmg
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/system/media/Disconnected.qmg:system/media/Disconnected.qmg \
     $(LOCAL_PATH)/proprietary/system/usr/idc/melfas_ts.idc:system/usr/idc/melfas_ts.idc \
-    $(LOCAL_PATH)/proprietary/system/usr/idc/sec_touchscreen.idc:system/usr/idc/sec_touchscreen.idc
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/system/usr/idc/sec_touchscreen.idc:system/usr/idc/sec_touchscreen.idc \
     $(LOCAL_PATH)/proprietary/system/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/proprietary/system/usr/keylayout/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/system/usr/keylayout/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl \
     $(LOCAL_PATH)/proprietary/system/vendor/firmware/fimc_is_fw.bin:system/vendor/firmware/fimc_is_fw.bin \
     $(LOCAL_PATH)/proprietary/system/vendor/firmware/mfc_fw.bin:system/vendor/firmware/mfc_fw.bin \
     $(LOCAL_PATH)/proprietary/system/vendor/firmware/setfile.bin:system/vendor/firmware/setfile.bin \
@@ -114,16 +98,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/system/vendor/firmware/SlimISP_GH.bin:system/vendor/firmware/SlimISP_GH.bin \
     $(LOCAL_PATH)/proprietary/system/vendor/firmware/SlimISP_GK.bin:system/vendor/firmware/SlimISP_GK.bin \
     $(LOCAL_PATH)/proprietary/system/vendor/firmware/SlimISP_JH.bin:system/vendor/firmware/SlimISP_JH.bin \
-    $(LOCAL_PATH)/proprietary/system/vendor/firmware/SlimISP_PH.bin:system/vendor/firmware/SlimISP_PH.bin \
     $(LOCAL_PATH)/proprietary/system/vendor/firmware/SlimISP_WH.bin:system/vendor/firmware/SlimISP_WH.bin \
     $(LOCAL_PATH)/proprietary/system/vendor/firmware/SlimISP_ZD.bin:system/vendor/firmware/SlimISP_ZD.bin \
     $(LOCAL_PATH)/proprietary/system/vendor/firmware/SlimISP_ZH.bin:system/vendor/firmware/SlimISP_ZH.bin \
     $(LOCAL_PATH)/proprietary/system/vendor/firmware/SlimISP_ZK.bin:system/vendor/firmware/SlimISP_ZK.bin \
-    $(LOCAL_PATH)/proprietary/system/vendor/firmware/SlimISP_ZM.bin:system/vendor/firmware/SlimISP_ZM.bin
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/system/vendor/firmware/SlimISP_ZM.bin:system/vendor/firmware/SlimISP_ZM.bin \
     $(LOCAL_PATH)/proprietary/system/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
-    $(LOCAL_PATH)/proprietary/system/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
     $(LOCAL_PATH)/proprietary/system/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
     $(LOCAL_PATH)/proprietary/system/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
-    $(LOCAL_PATH)/proprietary/system/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so
+    $(LOCAL_PATH)/proprietary/system/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
+    $(LOCAL_PATH)/proprietary/system/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so
+#    $(LOCAL_PATH)/proprietary/system/lib/libaudiosa.so:system/lib/libaudiosa.so \
+#    $(LOCAL_PATH)/proprietary/system/vendor/lib/liblvverx.so:system/vendor/lib/liblvverx.so \
+#    $(LOCAL_PATH)/proprietary/system/vendor/lib/liblvvetx.so:system/vendor/lib/liblvvetx.so \
